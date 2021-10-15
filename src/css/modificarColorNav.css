@@ -1,0 +1,7 @@
+:root{
+    --new-bg-color:#0A66C6;
+}
+
+nav{
+    background-color: var(--new-bg-color);
+}
