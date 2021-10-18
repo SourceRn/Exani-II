@@ -33,31 +33,31 @@ pregunta5 = new Preguntas(
     ['a. 20', 'b. 33', 'c. 30', 'd. 21'],
     'b'
 );
-imgPregunt6 = document.createElement("img");
-imgPregunt6.src = "src/images/reto/ejercicios/eje6.PNG";
+//imgPregunt6 = document.createElement("img");
+//imgPregunt6.src = "src/images/reto/ejercicios/eje6.PNG";
 pregunta6 = new Preguntas(
-    imgPregunt6,
+    '-5{[(-3*2)/3]+1}+2-[-7(7-2)+1]',
     ['a. 13', 'b. 10', 'c. -9', 'd. 9'],
     'c'
 );
-imgPregunt7 = document.createElement("img");
-imgPregunt7.src = "src/images/reto/ejercicios/eje7.jpeg";
+//imgPregunt7 = document.createElement("img");
+//imgPregunt7.src = "src/images/reto/ejercicios/eje7.jpeg";
 pregunta7 = new Preguntas(
-    imgPregunt7,
+    '1/2(3/4 + 1/8)',
     ['a. 7/14', 'b. 5/16', 'c. 6/14', 'd. 7/16'],
     'd'
 );
-imgPregunt8 = document.createElement("img");
-imgPregunt8.src = "src/images/reto/ejercicios/eje8.jpeg";
+//imgPregunt8 = document.createElement("img");
+//imgPregunt8.src = "src/images/reto/ejercicios/eje8.jpeg";
 pregunta8 = new Preguntas(
-    imgPregunt8,
+    '(3/2 + 1/4) / (5/6 - 1/3)',
     ['a. 2/7', 'b. 3.5', 'c. -1.8', 'd. -7/2'],
     'b'
 );
-imgPregunt9 = document.createElement("img");
-imgPregunt9.src = "src/images/reto/ejercicios/eje9.jpeg";
+//imgPregunt9 = document.createElement("img");
+//imgPregunt9.src = "src/images/reto/ejercicios/eje9.jpeg";
 pregunta9 = new Preguntas(
-    imgPregunt9,
+    '(-1 + 3/4 - 1/3) / (2 - 1/4)',
     ['a. -1/3', 'b. 1/3', 'c. -0.66', 'd. 0.66'],
     'a'
 );
