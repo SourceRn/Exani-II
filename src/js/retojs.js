@@ -108,6 +108,14 @@ for (let i = 0; i < arrayPreguntas.length; i++) {
 }
 
 
+//function verificarRespuestas(){
+//    preguntasTotales = arrayPreguntas.length;
+//    puntuacion = 0;
+//
+//    formularioReto = document.forms["quizForm"];
+//
+//}
+
 function escribirHTML(){
     //Pregunta 1
     document.getElementById('pregunta1').innerHTML = preguntasAzar[0].text;
