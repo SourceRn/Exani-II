@@ -5,51 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <!-- referencias a css-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/cssIndex.css">
     <link rel="shortcut icon" href="src/images/ameliaPNG.png" type="image/x-icon">
     <link rel="stylesheet" href="src/css/modificarColorNav.css">
 </head>
+<header>
+        <!-- cambiar el color de la barra de menu-->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0A66C6;">
+                    <div class="container-fluid"><br><br> <br>
+
+                    <a class="navbar-brand" ><b>EXANI II -- MATEMATICAS</b></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html"><b>Inicio</b></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>Contenido</b>
+                            </a>
+                            <!--agrege este codigo de dropdown menu para desplegar los subtemas--> 
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href=""><b>Razonamiento Aritmetico</b></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="jerarquia.html"><b>---Jerarquia de Operaciones</b></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="operacionescomb.html"><b>------Operaciones combinadas de suma, resta, multiplicacion y division con numeros enteros</b></a></li>
+                            <!--marca las lineas del menu-->
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="problemascon.html"><b>------Problemas con suma, resta, multiplicacion y division con numeros decimales y fracciones</b></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="reto.html"><b>Reto de Aprendizajes</b></a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                    
+                    </div>
+                </div>
+        </nav>
+</header>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">EXANI II -- MATEMATICAS</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Temas">Temas</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <br><br><br>
 
-    <div class="container">
+<BR>
+<BR>
+             <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <H1 style="text-align: center;"> -EXANI II- <br>MATEMÁTICAS </H1>
+                        </div>
+                    </div>
+            </div>
+<BR>
+   
+<hr SIZE="8px" > <!-- salto de parrafo-->
 
-        <div class="row">
+    <div  class="container-fluid">
+
+<!-- usamos "id" para poder poner las propiedades en el css-->
+
+        <div id="caja1" class="row">
             <div class="col-md-6">
-                <p>Imagen en referencia al exani o parecidos</p>
+                <!--Imagen en referencia al exani o parecidos-->
+                <p><img src="src/images/index/examenindex.png" width="100%" /></p>
             </div>
-            <div class="explicacionTema col-md-6">
-                <p class="titulo"><b>Titulo</b></p>
-                <p><b>Aqui va la informacion sobre los temas a tratar</b></p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, atque ullam iure nobis, officiis dolor aut ea beatae harum tempore placeat adipisci qui cum magni distinctio dicta. Omnis, eum officia?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, atque ullam iure nobis, officiis dolor aut ea beatae harum tempore placeat adipisci qui cum magni distinctio dicta. Omnis, eum officia?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, atque ullam iure nobis, officiis dolor aut ea beatae harum tempore placeat adipisci qui cum magni distinctio dicta. Omnis, eum officia?</p>
-            </div>
+                <div class="explicacionTema col-md-6">
+                    <p id="tituloinicio"><b>EXANI II: Examen Nacional de Ingreso: Nivel Superior</b></p>
+                    <!-- atributos style para centrar y aumentar tamaño del texto-->
+                    <p id= "textoinicio" style="text-align: justify;" >El EXANI II es un instrumento para evaluar integralmente habilidades académicas y conocimientos específicos de los aspirantes a ingresar a la educación superior.El resultado que obtuviste en este examen,Definira la Universidad en la que seas aceptad@, asi que con este curso el objetivo principal es que puedas repasar y estudiar los temas de Matematicas que vendran en tu Examen.
+                        Ahora da click al boton para comenzar el curso.</p>
+                       
+                        <a href="jerarquia.html" class="btn btn-primary btn-lg " style="background-color: orangered;" tabindex="-1" role="button" aria-disabled="true"><b>Comenzar</b></a>
+                </div>
         </div>
+
         <br><br>
-        <div class="row">
+
+        <hr SIZE="8px" ><!--salto de linea-->
+
+        <!-- lo puse como comentario por si se llega a ocupar-->
+       <!-- 
+           <div class="row">
             <div class="col-md-12" id="Temas">
-                <p class="titulo"><b>Links a Temas</b></p> <br>
-                <p><b>Aqui se listaran los temas por ejemplo: </b></p>
+                    <p class="titulo"><b>Links a Temas</b></p> <br>
+                    <p><b>Aqui se listaran los temas por ejemplo: </b></p>
                 <ol>
                     <li><a href="razonamientoAritm.html">Razonamiento Arimetico</a>
                         <ul>
@@ -63,7 +106,8 @@
                     </li>
                 </ol>
             </div>
-        </div>
+        </div> 
+    -->
 
     </div>
 

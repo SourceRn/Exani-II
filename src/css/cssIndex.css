@@ -2,3 +2,27 @@
     padding: 0;
     margin: 0;
 }
+/* aplicar color */
+/*#caja1{
+    background-color: blue;
+}*/
+
+/*etiqeta del titulo principal que dice -EXANI II- MATEMATICAS*/
+H1{
+    /*aplicar color al fondo de la etiqueta */
+    background-color: #8CC63F;
+    font-size: xx-large;
+    color: black;
+    font-weight: bold;
+}
+#tituloinicio{
+    font-size: x-large;
+}
+/*parrafo principal*/
+#textoinicio{
+    /*tamaño de letra*/
+    font-size: large;
+}
+.titulo{
+    font-size: x-large;
+}

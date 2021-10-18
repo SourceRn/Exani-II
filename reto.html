@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <!-- referencias a css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/cssIndex.css">
+    <link rel="shortcut icon" href="src/images/ameliaPNG.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/modificarColorNav.css">
+</head>
+<header>
+        <!-- cambiar el color de la barra de menu-->
+       <!-- inicia menu--> <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0A66C6;">
+
+                    <div class="container-fluid"><br><br> <br>
+
+                    <a class="navbar-brand" ><b>EXANI II -- MATEMATICAS</b></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html"><b>Inicio</b></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>Contenido</b>
+                            </a>
+                            <!--agrege este codigo de dropdown menu para desplegar los subtemas--> 
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href=""><b>Razonamiento Aritmetico</b></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="jerarquia.html"><b>---Jerarquia de Operaciones</b></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="operacionescomb.html"><b>------Operaciones combinadas de suma, resta, multiplicacion y division con numeros enteros</b></a></li>
+                            <!--marca las lineas del menu-->
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="problemascon.html"><b>------Problemas con suma, resta, multiplicacion y division con numeros decimales y fracciones</b></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="reto.html"><b>Reto de Aprendizajes</b></a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                    
+                    </div>
+                </div>
+        </nav> <!-- termina menu--> 
+</header>
+<body>
+
+<BR>
+<BR>
+    <!-- titulo principal -EXANII II MATEMATICAS-->
+             <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <H1 style="text-align: center;" > <br>RETO DE APRENDIZAJES <br> "Razonamiento Aritmetico" <br> <br> </H1>
+                        </div>
+                    </div>
+            </div>
+
+<BR>
+   
+
+
+ <div  class="container">  <!-- comienza container--> 
+    <hr SIZE="8px" > <!-- salto de parrafo--><!-- se puede cambiar color y tamaño-->
+    <div id="caja1" class="row">
+        <div class="col-md-12">
+            <header>
+               <BR><BR>
+             <H2 id="instruccionquiz">Realiza los siguientes ejercicios y selecciona la opción correcta </H2>
+            <BR><BR>
+            </header>
+                <section>
+                        <div id="resultado"></div>
+                        <form name="quizform"  onsubmit="return verificarRespuestas()">
+
+                            <h3>  1.	3 {1 + 2 [ 4 + 5 (6 - 7) + 8] - 9} = </h3> <br> 
+                                <input type="radio" name="eje1" value="a"> a. 37     <br>    
+                        
+                                <input type="radio" name="eje1" value="b"> b. 31    <br>     
+                    
+                                <input type="radio" name="eje1" value="c"> c. 16     <br>       
+    
+                                <input type="radio" name="eje1" value="d"> d. 27    <br>     
+                                 <br><br>
+                            <h3> 2.	-9 (-5 + 3 – 2 / -2) + 6 [ (-9) (-15 / 3) ] - [-20 / 5 (-4)] =</h3><br>
+                                <input type="radio" name="eje2" value="a"> a. 5     <br>
+                        
+                                <input type="radio" name="eje2" value="b"> b. 64     <br>
+                        
+                                <input type="radio" name="eje2" value="c"> c. -16     <br>
+        
+                                <input type="radio" name="eje2" value="d"> d. -5     <br>
+                                <br><br>
+                            <h3> 3.	4 [ (5 + 3) - 22] =    </h3><br>
+                                <input type="radio" name="eje3" value="a"> a. -56     <br>
+                            
+                                <input type="radio" name="eje3" value="b"> b. 10     <br>
+                            
+                                <input type="radio" name="eje3" value="c"> c. 17     <br>
+            
+                                <input type="radio" name="eje3" value="d"> d. 18     <br>
+                                <br><br>
+                            <h3> 4.	150 + (25 * 2) + 32 / (8*2) =  </h3><br> 
+                                <input type="radio" name="eje4" value="a"> a. 208    <br>
+                        
+                                <input type="radio" name="eje4" value="b"> b. 251     <br>
+                        
+                                <input type="radio" name="eje4" value="c"> c. 340    <br>
+        
+                                <input type="radio" name="eje4" value="d"> d. 58     <br>
+                                <br><br>
+                            <h3> 5.	(30 – 20) / 2 + (6*5) / 3 + (40 – 25) + (9-6) =   </h3> <br>
+                                <input type="radio" name="eje5" value="a"> a. 20     <br>
+                            
+                                <input type="radio" name="eje5" value="b"> b. 18     <br>
+                            
+                                <input type="radio" name="eje5" value="c"> c. 30     <br>
+            
+                                <input type="radio" name="eje5" value="d"> d. 21     <br>
+                             <br><br>
+                            <h3>6. <img src="src/images/reto/ejercicios/eje6.PNG"> </h3><br>
+                                <input type="radio" name="eje6" value="a"> a. texto     <br>
+                        
+                                <input type="radio" name="eje6" value="b"> b. texto     <br>
+                        
+                                <input type="radio" name="eje6" value="c"> c. texto     <br>
+        
+                                <input type="radio" name="eje6" value="d"> d. texto     <br>
+                                 <br><br>
+                            <h3> 7. <img src="src/images/reto/ejercicios/eje7.jpeg"></h3><br>
+                                <input type="radio" name="eje7" value="a"> a. texto     <br>
+                        
+                                <input type="radio" name="eje7" value="b"> b. texto     <br>
+                        
+                                <input type="radio" name="eje7" value="c"> c. texto     <br>
+        
+                                <input type="radio" name="eje7" value="d"> d. texto     <br>
+                                 <br><br>
+                            <h3> 8. <img src="src/images/reto/ejercicios/eje8.jpeg"></h3><br>
+                                <input type="radio" name="eje8" value="a"> a. texto     <br>
+                        
+                                <input type="radio" name="eje8" value="b"> b. texto     <br>
+                        
+                                <input type="radio" name="eje8" value="c"> c. texto     <br>
+        
+                                <input type="radio" name="eje8" value="d"> d. texto     <br>
+                                 <br><br>
+                            <h3> 9. <img src="src/images/reto/ejercicios/eje9.jpeg"> </h3><br>
+                                <input type="radio" name="eje9" value="a"> a. texto     <br>
+                        
+                                <input type="radio" name="eje9" value="b"> b. texto     <br>
+                        
+                                <input type="radio" name="eje9" value="c"> c. texto     <br>
+        
+                                <input type="radio" name="eje9" value="d"> d. texto     <br>
+                                 <br><br>
+                            <h3> 10. -0.3(-4.2/10.5 +(-5.2)^2 x √ 1.69 -1.7)</h3><br><!-- tema 1-->
+                                <input type="radio" name="eje10" value="a"> a. texto     <br>
+                        
+                                <input type="radio" name="eje10" value="b"> b. texto     <br>
+                        
+                                <input type="radio" name="eje10" value="c"> c. texto     <br>
+        
+                                <input type="radio" name="eje10" value="d"> d. texto     <br>
+
+                                <br><br>
+                                 <!-- y asi sucesivamente conforme el numero de preguntas-->
+                         
+                       
+                        <br><br> 
+                        <!-- boton enviar-->
+                        <center><input class="btn btn-primary btn-lg "  type="submit" value="Evaluarme" ></center>
+                       
+                            </form>
+                            <br>
+                            <!-- boton que leva al inicio de los temas o sea el primer tema que es jerarquia de operacones xd-->
+                            <a href="jerarquia.html" class="btn btn-primary btn-lg"  >Repasar temas </a> 
+                            <!-- boton para reiniciar la actividad de reto-->
+                            <a id="Reiniciar" href="#" class="btn btn-primary btn-lg  float-right"  > Reiniciar reto  </a> 
+
+                  </section>
+            </div>
+        </div>
+        <hr SIZE="8px" > <!-- salto de parrafo--><!-- se puede cambiar color y tamaño-->
+
+        <div class="row " > 
+            <center><h2 class="titulo"><b> texto alternativo  </b></H2> </center><br><br>
+                   
+            <div id="Temas" class="col-md-12 card-body d-flex justify-content-between align-items-center">
+                   
+                    <!-- botones-->
+
+                        <a href="index.html" class="btn btn-primary btn-lg"  >Volver a Inicio</a>
+                                                                                <!-- float-right se utiliza para que se posicione el boton a la derecha -->
+                        <a href="actividad.html" class="btn btn-primary btn-lg  float-right">Seguir con la Actividad</a>
+                                                <!-- btn-outline-dark es el contorno del boton--> <!--style="background-color: black;" cambia el color del boton -->
+                    </div>
+        </div>
+        <hr SIZE="8px" ><!--salto de linea-->
+ </div> <!-- termina container-->
+
+</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>

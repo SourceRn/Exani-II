@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <!-- referencias a css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/cssIndex.css">
+    <link rel="shortcut icon" href="src/images/ameliaPNG.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/modificarColorNav.css">
+</head>
+<header>
+        <!-- cambiar el color de la barra de menu-->
+       <!-- inicia menu--> <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0A66C6;">
+
+                    <div class="container-fluid"><br><br> <br>
+
+                    <a class="navbar-brand" ><b>EXANI II -- MATEMATICAS</b></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html"><b>Inicio</b></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>Contenido</b>
+                            </a>
+                            <!--agrege este codigo de dropdown menu para desplegar los subtemas--> 
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href=""><b>Razonamiento Aritmetico</b></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="jerarquia.html"><b>---Jerarquia de Operaciones</b></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="operacionescomb.html"><b>------Operaciones combinadas de suma, resta, multiplicacion y division con numeros enteros</b></a></li>
+                            <!--marca las lineas del menu-->
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="problemascon.html"><b>------Problemas con suma, resta, multiplicacion y division con numeros decimales y fracciones</b></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="reto.html"><b>Reto de Aprendizajes</b></a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                    
+                    </div>
+                </div>
+        </nav> <!-- termina menu--> 
+</header>
+<body>
+
+<BR>
+<BR>
+    <!-- titulo principal -EXANII II MATEMATICAS-->
+             <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <H1 style="text-align: center;" > Operaciones combinadas de suma, resta,<br> multiplicación y división con numeros enteros </H1>
+                        </div>
+                    </div>
+            </div>
+
+<BR>
+   
+<hr SIZE="8px" > <!-- salto de parrafo--><!-- se puede cambiar color y tamaño-->
+
+ <div  class="container-fluid">  <!-- comienza container--> 
+
+<!-- usamos "id" para poder poner las propiedades en el css-->
+
+        <div id="caja1" class="row">
+            <div class="col-md-6">
+             
+                    <p id="tituloinicio"><b> subtitulo pendiente</b></p>
+                    <!-- atributos style para centrar y aumentar tamaño del texto-->
+                    <p id= "textoinicio" style="text-align: justify;" >
+                        Dentro de las operaciones básicas de la aritmética existe una jerarquía de operaciones, 
+                        es decir un orden. Es una regla que estipula el orden en que deben ser ejecutadas las 
+                        operaciones en una expresión numérica, con operaciones múltiples. La operación de suma, 
+                        resta, multiplicación y división tienen el siguiente orden: primero se deben ejecutar las 
+                        operaciones agrupadas en paréntesis, luego las potencias y raíces, en el tercer lugar las 
+                        multiplicaciones y divisiones en orden de aparición y finalmente las sumas y restas.</p>
+
+            </div>
+
+                <div class="explicacionTema col-md-6">
+
+                              <!-- Aqui va la imagen -->
+                             <p style="text-align: center;"><img src="src/images/jerarquia/jerarquiaa.png" width="100%" ></video></p>
+       
+                  
+                </div>
+        </div>
+
+        <hr SIZE="8px" ><!--salto de linea-->
+
+
+        <div class="row " >
+            <div id="Temas" class="col-md-12">
+                    <p class="titulo"><b>Video explicando el tema</b></p> <br>
+                    <!-- etiqueta center para centrar xd-->
+                   <center> <p><video src="src/images/videos/VideoPrueba.mp4" poster="src/images/videos/PortadasVideos/Prueba.jpg" width="80%"  controls></video></p></center>
+                
+            </div>
+        </div>
+        <hr SIZE="8px" ><!--salto de linea-->
+
+        <div class="row " > 
+            <center><h2 class="titulo"><b>Ahora puedes practicar lo aprendido realizando una Actividad </b></H2> </center><br><br>
+                   
+            <div id="Temas" class="col-md-12 card-body d-flex justify-content-between align-items-center">
+                   
+                    <!-- botones-->
+
+                        <a href="index.html" class="btn btn-primary btn-lg"  >Volver a Inicio</a>
+                                                                                <!-- float-right se utiliza para que se posicione el boton a la derecha -->
+                        <a href="#" class="btn btn-primary btn-lg   float-right">Seguir con la Actividad</a>
+
+                                                <!-- notas extras xd: btn-outline-dark es el contorno del boton--> <!--style="background-color: black;" cambia el color del boton -->
+                    </div>
+        </div>
+        <hr SIZE="8px" ><!--salto de linea-->
+    </div> <!-- termina container-->
+
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
