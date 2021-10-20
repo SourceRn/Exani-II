@@ -1,6 +1,6 @@
 //Molde para Preguntas
-class Preguntas{
-    constructor(text, respuestas, resp_correcta){
+class Preguntas {
+    constructor(text, respuestas, resp_correcta) {
         this.text = text;
         this.respuestas = respuestas;
         this.resp_correcta = resp_correcta;
@@ -9,56 +9,47 @@ class Preguntas{
 
 //Preguntas
 pregunta1 = new Preguntas(
-    '3 {1 + 2 [ 4 + 5 (6 - 7) + 8] - 9} =',
-    ['a. -18', 'b. 18', 'c. 16', 'd. 13'],
+    '3 {1 + 2 [ 4 + 5 (6 - 7) + 8] - 9} =', ['a. -18', 'b. 18', 'c. 16', 'd. 13'],
     'b'
 );
 pregunta2 = new Preguntas(
-    '3(4-5)2 + 4(5-1) - 3(1+2)2(2) + 2(3)(3) =',
-    ['a. -26', 'b. -17', 'c. -94', 'd. 26'],
+    '3(4-5)2 + 4(5-1) - 3(1+2)2(2) + 2(3)(3) =', ['a. -26', 'b. -17', 'c. -94', 'd. 26'],
     'b'
 );
 pregunta3 = new Preguntas(
-    '4 [ (5 + 3) - 22] =',
-    ['a. -56', 'b. 10', 'c. 17', 'd. 18'],
+    '4 [ (5 + 3) - 22] =', ['a. -56', 'b. 10', 'c. 17', 'd. 18'],
     'a'
 );
 pregunta4 = new Preguntas(
-    '150 + (25 * 2) + 32 / (8*2) =',
-    ['a. 208', 'b. 202', 'c. 340', 'd. 58'],
+    '150 + (25 * 2) + 32 / (8*2) =', ['a. 208', 'b. 202', 'c. 340', 'd. 58'],
     'b'
 );
 pregunta5 = new Preguntas(
-    '(30 – 20) / 2 + (6*5) / 3 + (40 – 25) + (9-6) =',
-    ['a. 20', 'b. 33', 'c. 30', 'd. 21'],
+    '(30 – 20) / 2 + (6*5) / 3 + (40 – 25) + (9-6) =', ['a. 20', 'b. 33', 'c. 30', 'd. 21'],
     'b'
 );
 //imgPregunt6 = document.createElement("img");
 //imgPregunt6.src = "src/images/reto/ejercicios/eje6.PNG";
 pregunta6 = new Preguntas(
-    '-5{[(-3*2)/3]+1}+2-[-7(7-2)+1]',
-    ['a. 13', 'b. 10', 'c. -9', 'd. 9'],
+    '-5{[(-3*2)/3]+1}+2-[-7(7-2)+1]', ['a. 13', 'b. 10', 'c. -9', 'd. 9'],
     'c'
 );
 //imgPregunt7 = document.createElement("img");
 //imgPregunt7.src = "src/images/reto/ejercicios/eje7.jpeg";
 pregunta7 = new Preguntas(
-    '1/2(3/4 + 1/8)',
-    ['a. 7/14', 'b. 5/16', 'c. 6/14', 'd. 7/16'],
+    '1/2(3/4 + 1/8)', ['a. 7/14', 'b. 5/16', 'c. 6/14', 'd. 7/16'],
     'd'
 );
 //imgPregunt8 = document.createElement("img");
 //imgPregunt8.src = "src/images/reto/ejercicios/eje8.jpeg";
 pregunta8 = new Preguntas(
-    '(3/2 + 1/4) / (5/6 - 1/3)',
-    ['a. 2/7', 'b. 3.5', 'c. -1.8', 'd. -7/2'],
+    '(3/2 + 1/4) / (5/6 - 1/3)', ['a. 2/7', 'b. 3.5', 'c. -1.8', 'd. -7/2'],
     'b'
 );
 //imgPregunt9 = document.createElement("img");
 //imgPregunt9.src = "src/images/reto/ejercicios/eje9.jpeg";
 pregunta9 = new Preguntas(
-    '(-1 + 3/4 - 1/3) / (2 - 1/4)',
-    ['a. -1/3', 'b. 1/3', 'c. -0.66', 'd. 0.66'],
+    '(-1 + 3/4 - 1/3) / (2 - 1/4)', ['a. -1/3', 'b. 1/3', 'c. -0.66', 'd. 0.66'],
     'a'
 );
 pregunta10 = new Preguntas(
@@ -75,7 +66,7 @@ arrayPreguntas = [
 
 
 //Funcion que desordena un array y retorna uno nuevo
-function indicesAzar(array){
+function indicesAzar(array) {
     //Array que almacenara los indices de las preguntas
     indice = [];
 
@@ -108,15 +99,45 @@ for (let i = 0; i < arrayPreguntas.length; i++) {
 }
 
 
-//function verificarRespuestas(){
-//    preguntasTotales = arrayPreguntas.length;
-//    puntuacion = 0;
-//
-//    formularioReto = document.forms["quizForm"];
-//
-//}
+function verificarRespuestas() {
+    preguntasTotales = preguntasAzar.length;
+    puntuacion = 0;
 
-function escribirHTML(){
+    formularioReto = document.forms.form;
+    //console.log(formularioReto.eje1.value);
+
+    //array para almacenar respuestas correctas
+    respuestas = [];
+    //buclque almacena las respuestas correctas de las preguntas al azar
+    for (let index = 0; index < preguntasAzar.length; index++) {
+        respuestas[index] = preguntasAzar[index].resp_correcta;
+    }
+
+
+    for (let i = 1; i <= preguntasAzar.length; i++) {
+        if (formularioReto["eje" + i].value === null || formularioReto["eje" + i].value === "") {
+            resultado.innerHTML = '<h3>Responde Todas las Preguntas: <span>Pregunta ' + 1 + ' Porfavor</span>';
+            return false;
+        } else {
+            if (formularioReto["eje" + i].value === respuestas[i - 1]) {
+                puntuacion++;
+            }
+        }
+    }
+
+    resultado = document.getElementById("resultado");
+    resultado.innerHTML = '<h3>Obtuviste <span>' + puntuacion + '</span> de <span>' + preguntasTotales + '</span> puntos <h/3>';
+    btnRepasar = document.getElementById("Repasar");
+    btnRepasar.removeAttribute("hidden");
+    btnReiniciar = document.getElementById("Reiniciar");
+    btnReiniciar.removeAttribute("hidden");
+    btnInicio = document.getElementById("Inicio");
+    btnInicio.removeAttribute("hidden");
+
+    return false;
+}
+
+function escribirHTML() {
     //Pregunta 1
     document.getElementById('pregunta1').innerHTML = preguntasAzar[0].text;
     document.getElementById('resp1Preg1').innerHTML = preguntasAzar[0].respuestas[0];
