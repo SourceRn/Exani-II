@@ -60,31 +60,31 @@ pregunta10 = new Preguntas(
 pregunta11 = new Preguntas(
     'En la fiesta, Aisha y sus amigos se comieron 2 1/2 pizzas. Despues de la fiesta, sobraba 1/8 de pizza.' +
     '\n¿Cuantas Pizzas habia al inicio de la fiesta?', //text
-    ['a. 29/8', 'b. 27/8', 'c. 29/7', 'd. 24/8'], //respuestas
+    ['a. 29/8 de pizza', 'b. 27/8 de pizza', 'c. 29/7 de pizza', 'd. 24/8 de pizza'], //respuestas
     'a' //resp_correcta
 );
 pregunta12 = new Preguntas(
     'El primer miembro de un equipo en una carrera de 3 relevos debe correr 2 1/4 vueltas, el segundo debe correr 1 1/2 vueltas y el tercero debe correr 3 5/8 vueltas.' +
     '\n¿Cuantas vueltas en total debe correr cada equipo?', //text
-    ['a. 6 1/2 vueltas', 'b. 7 3/8', 'c. 8 4/5', 'd. 7 1/4'], //respuestas
+    ['a. 6 1/2 vueltas', 'b. 7 3/8 vueltas', 'c. 8 4/5 vueltas', 'd. 7 1/4 vueltas'], //respuestas
     'b' //resp_correcta
 );
 pregunta13 = new Preguntas(
     'Priya camino 1 1/2 dias en una excursion. Estuvo perdida 5/6 de ese tiempo' +
     '\n¿Que fraccion de un dia estuvo perdida Priya?', //text
-    ['a. 8/4 dias', 'b. 1 1/2', 'c. 1 1/4', 'd. 1 4/5'], //respuestas
+    ['a. 8/4 dias', 'b. 1 1/2 dias', 'c. 1 1/4 dias', 'd. 1 4/5 dias'], //respuestas
     'c' //resp_correcta
 );
 pregunta14 = new Preguntas(
     'La estatura del hermano de Junior es 1 1/2 metros. La estatura de Junior es 1 1/5 de la de su hermano' +
     '\n¿Cuanto mide Junior?', //text
-    ['a. 8/5 de metro', 'b. 3/5 de metro', 'c. 1 1/5 de metro', 'd. 4/5'], //respuestas
+    ['a. 8/5 de metro', 'b. 3/5 de metro', 'c. 1 1/5 de metro', 'd. 4/5 metro'], //respuestas
     'd' //resp_correcta
 );
 pregunta15 = new Preguntas(
     'Stephen utiliza 2/25 kilogramos de tofu en cada porcion de su famoso platillo de tofu. Tiene 1 1/10 kilogramos de tofu' +
     '\n¿Cuantas porciones puede hacer Stephen?', //text
-    ['a. 55/4 porciones', 'b. 50/8 porciones', 'c. 55/2', 'd. 54/4'], //respuestas
+    ['a. 55/4 porciones', 'b. 50/8 porciones', 'c. 55/2 porciones', 'd. 54/4 porciones'], //respuestas
     'a' //resp_correcta
 );
 pregunta16 = new Preguntas(
