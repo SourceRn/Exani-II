@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/cssIndex.css">
     <link rel="shortcut icon" href="src/images/ameliaPNG.png" type="image/x-icon">
-    <link rel="stylesheet" href="src/css/modificarColorNav.css">
+    <link rel="stylesheet" href="/src/css/cssReto.css">
 </head>
 <header>
         <!-- cambiar el color de la barra de menu-->
@@ -83,9 +83,8 @@
 
             
                 <section>
-                        <div id="resultado"></div>
-                        <form name="quizform"  onsubmit="return verificarRespuestas()">
-
+                        <form name="formAct1"  onsubmit="return validarRespuestasAct1()">
+                          
                             <h3>  1.	9+6^2-2*8 = </h3> <br> 
                                 <input type="radio" name="eje1" value="a"> a. 26     <br>    
                         
@@ -96,7 +95,7 @@
                                 <input type="radio" name="eje1" value="d"> d. 27    <br>     
                                  <br>
                                  <!-- Boton de la explicacion-->
-                                   <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                   <button id="btnProced1" hidden type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     <b>Procedimiento</b>
                                    </button>
   
@@ -147,7 +146,7 @@
                                 <input type="radio" name="eje2" value="d"> d. 46     <br>
                                 <br>
                                 <!-- Boton de la explicacion-->
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                <button id="btnProced2" hidden type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
                                     <b>Procedimiento</b>
                                    </button>
   
@@ -194,7 +193,7 @@
                                 <input type="radio" name="eje3" value="d"> d. -5     <br>
                                 <br>
                                 <!-- Boton de la explicacion-->
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                                <button id="btnProced3" hidden type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal3">
                                     <b>Procedimiento</b>
                                    </button>
   
@@ -228,7 +227,7 @@
         
                                 <input type="radio" name="eje4" value="d"> d. 50     <br>
                                 <br><!-- Boton de la explicacion-->
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                <button id="btnProced4" hidden type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal4">
                                  <b>Procedimiento</b>
                                 </button>
 
@@ -267,7 +266,7 @@
                                 <input type="radio" name="eje5" value="d"> d. -6     <br>
                              <br>
                              <!-- Boton de la explicacion-->
-                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                             <button id="btnProced5" hidden type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal5">
                                 <b>Procedimiento</b>
                                </button>
 
@@ -291,8 +290,13 @@
                             </div>
                             <br>
                             <br>
-                                
-                                 <!-- y asi sucesivamente conforme el numero de preguntas-->
+                            
+
+                            <div id="resultado"></div>
+                            <center><input class="btn btn-primary btn-lg " type="submit" value="Revisar la Actividad"></input>
+                              
+                        </form>
+                </section>         <!-- y asi sucesivamente conforme el numero de preguntas-->
                          
                        
                         
@@ -304,11 +308,10 @@
             <div id="Temas" class="col-md-12 card-body d-flex justify-content-between align-items-center">
                    
                     <!-- botones-->
-                    <a href="operacionescomb.html" class="btn btn-primary btn-lg " text-align="center"; tabindex="-1" role="button" aria-disabled="true"><center><b>Repasar el Tema</center></b></a>
+                    <a id="repasar" hidden href="operacionescomb.html" class="btn btn-primary btn-lg " text-align="center"; tabindex="-1" role="button" aria-disabled="true"><center><b>Repasar el Tema</center></b></a>
           
-                    <a href="actividad1.html" class="btn btn-primary btn-lg "  tabindex="-1" role="button" aria-disabled="true"><b>Reiniciar la Actividad</b></a>
-                     
-                    <a href="#" class="btn btn-primary btn-lg "  tabindex="-1" role="button" aria-disabled="true"><b>Revisar la Actividad</b></a>       
+                    <a id="reiniciar" hidden href="actividad1.html" class="btn btn-primary btn-lg "  tabindex="-1" role="button" aria-disabled="true"><b>Reiniciar la Actividad</b></a>
+                         
                                <!-- btn-outline-dark es el contorno del boton--> <!--style="background-color: black;" cambia el color del boton -->
                     </div>
         </div>
@@ -322,9 +325,9 @@
                    
                     <!-- botones-->
 
-                        <a href="index.html" class="btn btn-primary btn-lg"  >Volver a Inicio</a>
+                        <a href="index.html" class="btn btn-primary btn-lg" id="inicio" hidden>Volver a Inicio</a>
                                                                                 <!-- float-right se utiliza para que se posicione el boton a la derecha -->
-                        <a href="problemascon.html" class="btn btn-primary btn-lg  float-right">Siguiente tema</a>
+                        <a href="problemascon.html" class="btn btn-primary btn-lg  float-right" id="siguiente" hidden>Siguiente tema</a>
                                                 <!-- btn-outline-dark es el contorno del boton--> <!--style="background-color: black;" cambia el color del boton -->
                     </div>
         </div>
@@ -332,6 +335,6 @@
  </div> <!-- termina container-->
 
 </body>
-
+    <script src="/src/js/validacionAct1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>

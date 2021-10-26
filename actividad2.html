@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/cssIndex.css">
     <link rel="shortcut icon" href="src/images/ameliaPNG.png" type="image/x-icon">
-    <link rel="stylesheet" href="src/css/modificarColorNav.css">
+    <link rel="stylesheet" href="/src/css/cssReto.css">
 </head>
 <header>
         <!-- cambiar el color de la barra de menu-->
@@ -83,9 +83,7 @@
 
             
                 <section>
-                        <div id="resultado"></div>
-                        <form name="quizform"  onsubmit="return verificarRespuestas()">
-
+                        <form name="formAct2"  onsubmit="return validarRespuestasAct2()">
                             <h4>  1.	1.	Un profesor de educación física ordena a sus estudiantes hacer cada día los siguientes recorridos:	
                                 <br>			
                                 -Lunes: 2,32 kilómetros.	
@@ -109,7 +107,7 @@
                                 <input type="radio" name="eje1" value="d"> d. 21,60km   <br>     
                                  <br>
                                  <!-- Boton de la explicacion-->
-                                   <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                   <button hidden id="btnProced1" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     <b>Procedimiento</b>
                                    </button>
   
@@ -145,7 +143,7 @@
                                 <input type="radio" name="eje2" value="d"> d. 2153/760     <br>
                                 <br>
                                 <!-- Boton de la explicacion-->
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                <button hidden id="btnProced2" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
                                     <b>Procedimiento</b>
                                    </button>
   
@@ -207,7 +205,7 @@
                                 <input type="radio" name="eje3" value="d"> d. -7/46 de Kilometros por minuto     <br>
                                 <br>
                                 <!-- Boton de la explicacion-->
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                                <button hidden id="btnProced3" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal3">
                                     <b>Procedimiento</b>
                                    </button>
   
@@ -242,7 +240,7 @@
         
                                 <input type="radio" name="eje4" value="d"> d. -1/3     <br>
                                 <br><!-- Boton de la explicacion-->
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                <button hidden id="btnProced4" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal4">
                                  <b>Procedimiento</b>
                                 </button>
 
@@ -296,7 +294,7 @@
                                 <input type="radio" name="eje5" value="d"> d. 1 1/6 hrs   <br>
                              <br>
                              <!-- Boton de la explicacion-->
-                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                             <button hidden id="btnProced5" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal5">
                                 <b>Procedimiento</b>
                                </button>
 
@@ -321,8 +319,10 @@
                             <br>
                             <br>
                             <br>
-                                
-                                 <!-- y asi sucesivamente conforme el numero de preguntas-->
+                            <div id="resultado"></div>
+                            <center><input class="btn btn-primary btn-lg " type="submit" value="Revisar la Actividad"></input>
+                        </form> 
+                </section>        <!-- y asi sucesivamente conforme el numero de preguntas-->
                          
                        
                         
@@ -334,11 +334,9 @@
             <div id="Temas" class="col-md-12 card-body d-flex justify-content-between align-items-center">
                    
                     <!-- botones-->
-                    <a href="problemascon.html" class="btn btn-primary btn-lg " text-align="center"; tabindex="-1" role="button" aria-disabled="true"><center><b>Repasar el Tema</center></b></a>
+                    <a href="problemascon.html" class="btn btn-primary btn-lg " text-align="center"; tabindex="-1" role="button" aria-disabled="true" hidden id="repasar"><center><b>Repasar el Tema</center></b></a>
           
-                    <a href="actividad2.html" class="btn btn-primary btn-lg "  tabindex="-1" role="button" aria-disabled="true"><b>Reiniciar la Actividad</b></a>
-                     
-                    <a href="#" class="btn btn-primary btn-lg "  tabindex="-1" role="button" aria-disabled="true"><b>Revisar la Actividad</b></a>       
+                    <a href="actividad2.html" class="btn btn-primary btn-lg "  tabindex="-1" role="button" aria-disabled="true" hidden id="reiniciar"><b>Reiniciar la Actividad</b></a>
                                <!-- btn-outline-dark es el contorno del boton--> <!--style="background-color: black;" cambia el color del boton -->
                     </div>
         </div>
@@ -346,7 +344,7 @@
         <hr SIZE="8px" ><!-- salto de parrafo--><!-- se puede cambiar color y tamaño-->
         <div class="row " > 
           <!--<center><h2 class="titulo"><b> texto alternativo </b></H2> </center><br><br>-->
-            <div class="row " > 
+            <div class="row " hidden id="info"> 
                 <center><h2 class="titulo"><b>Es momento de realizar "El Reto de Aprendizajes" solo si estas listo, en caso de que no puedes volver a checar los temas</b> </b></H2> </center><br><br>
                        
                    
@@ -354,9 +352,9 @@
                    
                     <!-- botones-->
 
-                        <a href="index.html" class="btn btn-primary btn-lg"  >Regresar a los Temas</a>
+                        <a href="index.html" class="btn btn-primary btn-lg">Regresar a los Temas</a>
                                                                                 <!-- float-right se utiliza para que se posicione el boton a la derecha -->
-                        <a href="reto.html" class="btn btn-primary btn-lg  float-right">Iniciar el Reto de Aprendizajes</a>
+                        <a href="reto.html" class="btn btn-primary btn-lg  float-right" >Iniciar el Reto de Aprendizajes</a>
                                                 <!-- btn-outline-dark es el contorno del boton--> <!--style="background-color: black;" cambia el color del boton -->
                     </div>
         </div>
@@ -364,6 +362,6 @@
  </div> <!-- termina container-->
 
 </body>
-
+    <script src="/src/js/validacionAct2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
