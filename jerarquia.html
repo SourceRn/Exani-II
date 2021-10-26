@@ -71,17 +71,43 @@
 <!-- usamos "id" para poder poner las propiedades en el css-->
 
         <div id="caja1" class="row">
+           
             <div class="col-md-6">
-             
+                <br>
+                <br>
+                <br>
+                
+                
+                <div class="accordion accordion-flush col-md-11"  id="accordionFlushExample" margin="100px">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <b id="tituloinicio"><center>Jerarquia de Operaciones</center></b>
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div id= "textoinicio" style="text-align: justify;" class="accordion-body">Dentro de las operaciones básicas de la aritmética existe una jerarquía de operaciones, 
+                            es decir un orden. Es una regla que estipula el orden en que deben ser ejecutadas las 
+                            operaciones en una expresión numérica, con operaciones múltiples. La operación de suma, 
+                            resta, multiplicación y división tienen el siguiente orden: primero se deben ejecutar las 
+                            operaciones agrupadas en paréntesis, luego las potencias y raíces, en el tercer lugar las 
+                            multiplicaciones y divisiones en orden de aparición y finalmente las sumas y restas.<p id= "textoinicio" style="text-align: justify;">Ahora te presentaremos un video para entender mejor el tema.</p></div>
+                      </div>
+                    </div>
+                    <!--<div class="explicacionTema col-md-6">
+                        <p id="tituloinicio" ><b>EXANI II: Examen Nacional de Ingreso: Nivel Superior</b></p>-->
+                        <!-- atributos style para centrar y aumentar tamaño del texto-->
+                        <!--<p id= "textoinicio" style="text-align: justify;" >El EXANI II es un instrumento para evaluar integralmente habilidades académicas y conocimientos específicos de los aspirantes a ingresar a la educación superior.El resultado que obtuviste en este examen,Definira la Universidad en la que seas aceptad@, asi que con este curso el objetivo principal es que puedas repasar y estudiar los temas de Matematicas que vendran en tu Examen.
+                            Ahora da click al boton para comenzar el curso.</p>
+                           
+                        --> 
+                        <br>
+                        <br>
+                        <a href="#video" class="btn btn-primary btn-lg " style="background-color: orangered;" tabindex="-1" role="button" aria-disabled="true"><b>Seguir con el Video</b></a>
+                    </div>
                     <!--<p id="tituloinicio"><b> subtitulo pendiente</b></p>-->
                     <!-- atributos style para centrar y aumentar tamaño del texto-->
-                    <p id= "textoinicio" style="text-align: justify;" >
-                        Dentro de las operaciones básicas de la aritmética existe una jerarquía de operaciones, 
-                        es decir un orden. Es una regla que estipula el orden en que deben ser ejecutadas las 
-                        operaciones en una expresión numérica, con operaciones múltiples. La operación de suma, 
-                        resta, multiplicación y división tienen el siguiente orden: primero se deben ejecutar las 
-                        operaciones agrupadas en paréntesis, luego las potencias y raíces, en el tercer lugar las 
-                        multiplicaciones y divisiones en orden de aparición y finalmente las sumas y restas.</p>
+                    
 
             </div>
 
@@ -99,9 +125,9 @@
 
         <div class="row " >
             <div id="Temas" class="col-md-12">
-                    <p class="titulo"><b>Video explicando el tema</b></p> <br>
+                    <center><p class="titulo"><b><h3>Video explicando el tema</h3></b></p></center> <br>
                     <!-- etiqueta center para centrar xd-->
-                   <center> <p><video src="src/images/videos/jerarquia/jerarquiavideo.mp4" poster="src/images/videos/PortadasVideos/jerarportada .jpeg" width="80%"  controls></video></p></center>
+                   <center> <p><video id="video" src="src/images/videos/jerarquia/jerarquiavideo.mp4" poster="src/images/videos/PortadasVideos/jerarportada .jpeg" width="80%"  controls></video></p></center>
                 
             </div>
         </div>
@@ -116,7 +142,7 @@
 
                         <a href="index.html" class="btn btn-primary btn-lg"  >Volver a Inicio</a>
                                                                                 <!-- float-right se utiliza para que se posicione el boton a la derecha -->
-                        <a href="actividad.html" class="btn btn-primary btn-lg   float-right">Seguir con la actividad</a>
+                        <a href="arrastar.html" class="btn btn-primary btn-lg   float-right">Seguir con la actividad</a>
 
                                                 <!-- notas extras xd: btn-outline-dark es el contorno del boton--> <!--style="background-color: black;" cambia el color del boton -->
                     </div>
