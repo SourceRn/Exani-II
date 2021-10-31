@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/cssIndex.css">
     <link rel="shortcut icon" href="src/images/ameliaPNG.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/cssReto.css">
     <title>Actividad Jerarquia de Operaciones</title>
     <style>
         .caja{
@@ -83,6 +84,8 @@
                     <div class="col-md-12">
                       <header> <center><H2>ACTIVIDAD</H2></center>
                         <center> <p class="titulo"><b>Realiza los siguientes ejercicios con atencion y coloca la respuesta que consideres correcta, en caso de no saber puedes regresar a repasar el tema o ver la solucion del problema.
+                        <br>
+                        <p style="color: red;">¡UNA VEZ COLOQUES EN SU LUGAR CADA NUMERO NO SERA POSIBLE REACOMODARLOS, PIENSA BIEN EN QUE RECUADRO VAN!</p>
                         </b></p> </center> <br>
                       </header>
                       </div>
@@ -91,6 +94,7 @@
       <div class="container">
         <h1>Orden de la Jerarquia de Operaciones</h1>
         <br>
+        <div id="resultado"></div>
         <br>
         <div class="row">
             <div class="col-md-6">
@@ -100,138 +104,35 @@
                     <img src="src/images/index/3.png" width="20%" height="20%"alt="" class="producto">
                     <img src="src/images/index/4.png" width="20%" height="20%"alt="" class="producto">
                 </div>
-
             </div>
             <div class="col-md-6">
                 <div class="cajad" id="caja2">
-                    <h3>A).( ), [ ], { }</h3>
-                    
-
-
-
+                    <h3>A).( ), [ ], { }</h3>               
                 </div>
-                
-
             </div>
             <div class="col-md-6">
                 <div class="cajad" id="caja3">
-                    <h3>B).+, -</h3>
-                    
-
-
-
+                    <h3>B).+, -</h3>                   
                 </div>
-                
-
             </div>
             <div class="col-md-6">
                 <div class="cajad" id="caja4">
-                    <h3>C).*, /</h3>
-                    
-
-
-
+                    <h3>C).*, /</h3>    
                 </div>
-                
-
             </div>
             <div class="col-md-6">
                 <div class="cajad" id="caja5">
                     <h3>D).^</h3>
-                    
-
-
-
                 </div>
-                
-
             </div>
-
         </div>
 
     </div>
+    <br><br>
+    <center><a href="#" class="btn btn-primary btn-lg "  tabindex="-1" role="button" aria-disabled="true" onclick="return validacion()"><b>Revisar la Actividad</b></a></center>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <script>
-        var vcaja2 = document.getElementById("caja2");
-        var vcaja1 = document.getElementById("caja1");
-        var vcaja3 = document.getElementById("caja3");
-        var vcaja4 = document.getElementById("caja4");
-        var vcaja5 = document.getElementById("caja5");
-        var productos = document.getElementsByClassName("producto");
-        
-        vcaja2.addEventListener("dragover", (ev) => permitirSoltar(ev));
-        vcaja2.addEventListener("drop", (ev) => soltar(ev));
-       
-        vcaja3.addEventListener("dragover", (ev) => permitirSoltar(ev));
-        vcaja3.addEventListener("drop", (ev) => soltar2(ev));
-        
-        vcaja4.addEventListener("dragover", (ev) => permitirSoltar(ev));
-        vcaja4.addEventListener("drop", (ev) => soltar4(ev));
-        
-        vcaja5.addEventListener("dragover", (ev) => permitirSoltar(ev));
-        vcaja5.addEventListener("drop", (ev) => soltar5(ev));
-
-        vcaja1.addEventListener("dragover", (ev) => permitirSoltar(ev));
-        vcaja1.addEventListener("drop", (ev) => soltar1(ev));
-    
-        
-        
-        for(var i=0; i<productos.length; i++){
-            productos[i].setAttribute("draggable", "true")
-            productos[i].setAttribute("id", "producto"+i)
-            productos[i].addEventListener("dragstart",(ev) => iniciarArrastre(ev))
-        }
-        function iniciarArrastre(ev){
-            ev.dataTransfer.setData("idproducto",ev.target.id);
-            console.log(ev.target.id)
-
-        }
-
-        function permitirSoltar(ev){
-            console.log("arrastrando");
-            ev.preventDefault();
-        }
-
-        function soltar(ev){
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("idproducto");
-            vcaja2.appendChild(document.getElementById(data));
-            console.log(vcaja2.childElementCount);
-
-        }
-
-        function soltar1(ev){
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("idproducto");
-            vcaja1.appendChild(document.getElementById(data));
-            console.log(vcaja1.childElementCount);
-
-        }
-        function soltar2(ev){
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("idproducto");
-            vcaja3.appendChild(document.getElementById(data));
-            console.log(vcaja3.childElementCount);
-
-        }
-        
-        function soltar4(ev){
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("idproducto");
-            vcaja4.appendChild(document.getElementById(data));
-            console.log(vcaja4.childElementCount);
-
-        }
-        function soltar5(ev){
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("idproducto");
-            vcaja5.appendChild(document.getElementById(data));
-            console.log(vcaja5.childElementCount);
-
-        }
-
-    </script>
+    <script src="src/js/arrastrar.js"></script>
     </div>
 </div>
 <br><br>
@@ -244,11 +145,10 @@
     <div id="Temas" class="col-md-12 card-body d-flex justify-content-between align-items-center">
            
             <!-- botones-->
-            <a href="jerarquia.html" class="btn btn-primary btn-lg " text-align="center"; tabindex="-1" role="button" aria-disabled="true"><center><b>Repasar el Tema</center></b></a>
+            <a href="jerarquia.html" class="btn btn-primary btn-lg " text-align="center"; tabindex="-1" role="button" aria-disabled="true" id="repasar" hidden><center><b>Repasar el Tema</center></b></a>
   
-            <a href="arrastar.html" class="btn btn-primary btn-lg "  tabindex="-1" role="button" aria-disabled="true"><b>Reiniciar la Actividad</b></a>
-             
-            <a href="#" class="btn btn-primary btn-lg "  tabindex="-1" role="button" aria-disabled="true"><b>Revisar la Actividad</b></a>       
+            <a href="arrastar.html" class="btn btn-primary btn-lg "  tabindex="-1" role="button" aria-disabled="true" id="reiniciar" hidden><b>Reiniciar la Actividad</b></a>
+                   
                        <!-- btn-outline-dark es el contorno del boton--> <!--style="background-color: black;" cambia el color del boton -->
             </div>
 </div>
@@ -262,9 +162,9 @@
            
             <!-- botones-->
 
-                <a href="index.html" class="btn btn-primary btn-lg"  >Volver a Inicio</a>
+                <a href="index.html" class="btn btn-primary btn-lg"  id="volver" hidden>Volver a Inicio</a>
                                                                         <!-- float-right se utiliza para que se posicione el boton a la derecha -->
-                <a href="operacionescomb.html" class="btn btn-primary btn-lg  float-right">Siguiente tema</a>
+                <a href="operacionescomb.html" class="btn btn-primary btn-lg  float-right" id="siguiente" hidden>Siguiente tema</a>
                                         <!-- btn-outline-dark es el contorno del boton--> <!--style="background-color: black;" cambia el color del boton -->
             </div>
 </div>
