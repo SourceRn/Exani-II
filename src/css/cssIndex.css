@@ -2,21 +2,25 @@
     padding: 0;
     margin: 0px;
 }
-/* aplicar color */
-/*#caja1{
-    background-color: blue;
-}*/
-
-/*etiqeta del titulo principal que dice -EXANI II- MATEMATICAS*/
+/*color blanco del container reto*/
+section{
+background-color: white;
+padding: 10px;
+}
+#caja1, #temas{
+    background-color: white;
+  }
 H1{
     /*aplicar color al fondo de la etiqueta */
     background-color: #8CC63F;
     font-size: xx-large;
     color: black;
     font-weight: bold;
+    font-family: 'FUTRFW','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #tituloinicio{
     font-size: x-large;
+    text-align: justify;
 }
 /*parrafo principal*/
 #textoinicio{
@@ -25,4 +29,18 @@ H1{
 }
 .titulo{
     font-size: x-large;
+}
+
+
+
+/* fuentes---------------------------------------------------------------------------------*/
+
+@font-face{
+    font-family: 'FUTRFW';
+       src:url('src/fonts/FUTRFW.TTF');
+       
+   }
+  
+#menu{
+    font-family: 'FUTRFW', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

@@ -4,7 +4,6 @@ function validarRespuestasAct1(){
     preguntasTotales = 5;
     form = document.forms.formAct1;
     resultado = document.getElementById('resultado');
-    gif = document.getElementById('gif');
     
     for (let i = 1; i <= 5; i++) {
         if (form["eje"+i].value === null || form["eje"+i].value === "") {
@@ -16,18 +15,9 @@ function validarRespuestasAct1(){
             }
         }
     }
-    
-    //console.log(gif);
 
     resultado.innerHTML = '<h3>Obtuviste <span>' + puntacion + '</span> de <span>' + preguntasTotales + '</span> puntos <h/3>';
     
-
-    if (puntacion >= 3) {
-        gif.innerHTML = '<img src="src/images/ameliaPNG.png">';
-    } else {
-        gif.innerHTML = '<img src="src/images/a.png">';
-    }
-
     for (let index = 1; index <= 5; index++) {
         document.getElementById('btnProced'+index).removeAttribute('hidden');
     }
