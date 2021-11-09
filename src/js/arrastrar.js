@@ -15,8 +15,23 @@
         var vcaja3 = document.getElementById("caja3");
         var vcaja4 = document.getElementById("caja4");
         var vcaja5 = document.getElementById("caja5");
+        cajas = [vcaja1, vcaja2, vcaja3, vcaja4, vcaja5];
         var productos = document.getElementsByClassName("producto");//array
 
+        vcaja1.addEventListener("dragover", (ev) => permitirSoltar(ev));
+        vcaja1.addEventListener("drop", (ev) => soltar1(ev));
+
+        vcaja2.addEventListener("dragover", (ev) => permitirSoltar(ev));
+        vcaja2.addEventListener("drop", (ev) => soltar2(ev));
+    
+        vcaja3.addEventListener("dragover", (ev) => permitirSoltar(ev));
+        vcaja3.addEventListener("drop", (ev) => soltar3(ev));
+            
+        vcaja4.addEventListener("dragover", (ev) => permitirSoltar(ev));
+        vcaja4.addEventListener("drop", (ev) => soltar4(ev));
+            
+        vcaja5.addEventListener("dragover", (ev) => permitirSoltar(ev));
+        vcaja5.addEventListener("drop", (ev) => soltar5(ev));
 
         for(var i=0; i<productos.length; i++){
             productos[i].setAttribute("draggable", "true")
@@ -24,21 +39,6 @@
             productos[i].addEventListener("dragstart",(ev) => iniciarArrastre(ev))
         }
         
-        vcaja1.addEventListener("dragover", (ev) => permitirSoltar(ev));
-        vcaja1.addEventListener("drop", (ev) => soltar1(ev));
-
-        vcaja2.addEventListener("dragover", (ev) => permitirSoltar(ev));
-        vcaja2.addEventListener("drop", (ev) => soltar2(ev));
-       
-        vcaja3.addEventListener("dragover", (ev) => permitirSoltar(ev));
-        vcaja3.addEventListener("drop", (ev) => soltar3(ev));
-        
-        vcaja4.addEventListener("dragover", (ev) => permitirSoltar(ev));
-        vcaja4.addEventListener("drop", (ev) => soltar4(ev));
-        
-        vcaja5.addEventListener("dragover", (ev) => permitirSoltar(ev));
-        vcaja5.addEventListener("drop", (ev) => soltar5(ev));
-
     
         function iniciarArrastre(ev){
             ev.dataTransfer.setData("idproducto",ev.target.id);
@@ -47,6 +47,12 @@
 
         function permitirSoltar(ev){
             ev.preventDefault();
+        }
+
+        function evitarRepeticionDeImagenes(numImagenes, caja, idProducto){
+            if (numImagenes <= 1) {
+                caja.appendChild(document.getElementById(idProducto));
+            }
         }
 
         function soltar1(ev){
@@ -91,13 +97,6 @@
             ids[3] = data5;
         }
 
-
-        function evitarRepeticionDeImagenes(numImagenes, caja, idProducto){
-            if (numImagenes <= 1) {
-                caja.appendChild(document.getElementById(idProducto));
-            }
-        }
-
         //function newArray(array){
         //    for (let i = 0; i < array.length; i++) {
         //        if ( array[i] === null || array[i] === "" ) {
@@ -111,6 +110,8 @@
         //console.log(newArray(arrayPrueba));
         //console.log(arrayPrueba);
 
+        //ifAnswered(answered);
+
         function validacion(){
             for (let i = 0; i < ids.length; i++) {
                 if (ids[i] === ordenCorrecto[i]) {
@@ -121,4 +122,34 @@
                 document.getElementById(btns[i]).removeAttribute('hidden');
             }
             resultado.innerHTML = '<h3>Obtuviste <span>' + puntos + '</span> de <span>' + puntuacionTotal + '</span> puntos <h/3>';
+            
+
+            //deshabilitar arrastre
+
+            var vcaja2 = document.getElementById("caja2");
+            var vcaja1 = document.getElementById("caja1");
+            var vcaja3 = document.getElementById("caja3");
+            var vcaja4 = document.getElementById("caja4");
+            var vcaja5 = document.getElementById("caja5");
+
+            vcaja1.removeEventListener("dragover", (ev) => permitirSoltar(ev));
+            vcaja1.removeEventListener("drop", (ev) => soltar1(ev));
+
+            vcaja2.removeEventListener("dragover", (ev) => permitirSoltar(ev));
+            vcaja2.removeEventListener("drop", (ev) => soltar2(ev));
+        
+            vcaja3.removeEventListener("dragover", (ev) => permitirSoltar(ev));
+            vcaja3.removeEventListener("drop", (ev) => soltar3(ev));
+                
+            vcaja4.removeEventListener("dragover", (ev) => permitirSoltar(ev));
+            vcaja4.removeEventListener("drop", (ev) => soltar4(ev));
+                
+            vcaja5.removeEventListener("dragover", (ev) => permitirSoltar(ev));
+            vcaja5.removeEventListener("drop", (ev) => soltar5(ev));
+
+            for(var i=0; i<productos.length; i++){
+                productos[i].removeAttribute("draggable", "true")
+                productos[i].removeAttribute("id", "producto"+(i+1))                 //Bucle que escribe en el html
+                productos[i].removeEventListener("dragstart",(ev) => iniciarArrastre(ev))
+            }
         }
