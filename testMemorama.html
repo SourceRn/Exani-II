@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/cssTestMemorama.css">
+    <link rel="stylesheet" href="src/css/cssIndex.css">
+    <link rel="shortcut icon" href="src/images/index/MiLogo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Memorama</title>
+</head>
+
+<header>
+
+    <!--Barra de Menu -->
+    <nav id="menu" class="navbar navbar-expand-lg navbar-dark" style="background-color: #0A66C6;">
+
+
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="src/images/index/MiLogo.png" width="100px"><b> EXANI II
+                    MATEMÁTICAS</b> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><b>Inicio</b></a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>Contenido</b>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#"><b>Razonamiento aritmético</b></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="jerarquia.html"><b>Jerarquía de operaciones</b></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="operacionescomb.html"><b>Operaciones combinadas de suma,
+                                        resta, multiplicacion y division con numeros enteros</b></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="problemascon.html"><b>Problemas con suma, resta,
+                                        multiplicacion y division con numeros decimales y fracciones</b>b></a>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="reto.html"><b>Reto de aprendizajes</b></a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<br><br><br>
+
+<body>
+    <div class="container">
+        <div id="tablero">
+        </div>
+        <div id="result">
+        </div>
+        <!--<div class="nuevoJuego" onclick="generarTablero()" hidden id="btnNewGame"></div>-->
+        <a href="testMemorama.html" hidden id="btnNewGame" class="nuevoJuego"></a>
+        <div id="saltosdeLinea"></div>
+    </div>
+    <div id="stylesTab"></div>
+    <br><br><br><br><br>
+
+    <script src="src/js/testJSMemorama.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
